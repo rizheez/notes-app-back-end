@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 
-exports.up = pgm => {
+exports.up = (pgm) => {
     pgm.createTable('notes', {
         id: {
             type: 'VARCHAR(50)',
@@ -22,13 +22,13 @@ exports.up = pgm => {
             type: 'TEXT',
             notNull: true,
         },
-        update_at: {
+        updated_at: {
             type: 'TEXT',
             notNull: true,
         },
     })
-};
+}
 
-exports.down = pgm => {
-    pgm.dropTable('notes');
-};
+exports.down = (pgm) => {
+    pgm.dropTable('notes')
+}
